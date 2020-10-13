@@ -10,22 +10,26 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class authorization : Form
     {
-        public Form1()
+        public authorization()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void authorization_Load(object sender, EventArgs e)
         {
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            authorization newForm = new authorization();
-            newForm.Show();
+                MessageBox.Show("Привет");
         }
     }
 }
