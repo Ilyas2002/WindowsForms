@@ -29,7 +29,7 @@ namespace WindowsFormsApp1
             {
                 //con.DataSource = 
                 con.Open();
-                SqlCommand command = new SqlCommand($"Select role_id from [dbo].[user] where login = '{textBox1.Text}' and password = '{textBox2.Text}'", con);
+                SqlCommand command = new SqlCommand($"Select role_id,user_id from [dbo].[user] where login = '{textBox1.Text}' and password = '{textBox2.Text}'", con);
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.HasRows)
                 {
@@ -44,7 +44,7 @@ namespace WindowsFormsApp1
 
                             case "gf":
 
-                                user_form k = new user_form();
+                                user_form k = new user_form(reader[1].ToString());
                                 k.ShowDialog();
                                 break;
 
