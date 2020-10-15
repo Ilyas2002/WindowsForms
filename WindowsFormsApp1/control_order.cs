@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace WindowsFormsApp1
 {
@@ -21,6 +22,23 @@ namespace WindowsFormsApp1
         }
 
         private void control_order_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection con = new SqlConnection(@"Data Source = 303-2\SQLEXPRESS; Initial Catalog = bd; Integrated Security = SSPI; Integrated Security = true;"))
+            {
+                con.Open();
+                SqlCommand command = new SqlCommand($@"DELETE FROM [dbo].[Order] WHERE order_id = {order_id}", con);
+                command.ExecuteNonQuery();
+            }
+
+            label1.Text = null;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }

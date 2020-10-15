@@ -65,5 +65,14 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //  new Reg_in().Show;
+            //Reg_in reg_ = new Reg_in();
+            //Form Form1 = new Reg_in();
+
+
+        }
     }
 }
