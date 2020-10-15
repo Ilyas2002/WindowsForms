@@ -42,7 +42,7 @@ namespace WindowsFormsApp1
                                 g.ShowDialog();
                                 break;
 
-                            case "gf":
+                            case "123":
 
                                 user_form k = new user_form(reader[1].ToString());
                                 k.ShowDialog();
