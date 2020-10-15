@@ -87,6 +87,9 @@
     <Compile Include="user_form.Designer.cs">
       <DependentUpon>user_form.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="admin_form.resx">
+      <DependentUpon>admin_form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="authorization.resx">
       <DependentUpon>authorization.cs</DependentUpon>
     </EmbeddedResource>
