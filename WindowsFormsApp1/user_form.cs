@@ -129,6 +129,11 @@ FROM            car INNER JOIN
                 command.ExecuteNonQuery();
             }
         }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
       
 }

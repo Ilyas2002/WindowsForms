@@ -49,6 +49,13 @@ namespace WindowsFormsApp1
         private void Reg_in_Load(object sender, EventArgs e)
         {
 
+            /*
+             * 
+             * 
+             */
+
+            //
+
         }
     }
 }
