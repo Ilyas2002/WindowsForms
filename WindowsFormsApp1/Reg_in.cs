@@ -20,7 +20,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text!=""&& (textBox2.Text == textBox3.Text) && textBox4.Text != "" && textBox5.Text != "")
+            if (textBox1.Text!="" && (textBox2.Text == textBox3.Text) && textBox4.Text != "" && textBox5.Text != "")
             {
                 using (SqlConnection con = new SqlConnection(@"Data Source = 303-2\SQLEXPRESS; Initial Catalog = bd; Integrated Security = SSPI; Integrated Security = true;"))
                 {
@@ -32,11 +32,11 @@ namespace WindowsFormsApp1
            ,[fio]
            ,[email])
      VALUES
-           (<login, nchar(10),>
-           ,<password, nchar(30),>
-           ,<role_id, nchar(10),>
-           ,<fio, nchar(100),>
-           ,<email, nchar(30),>)", con);
+           ('{textBox1.Text}'
+           ,'{textBox2.Text}'
+           ,'{textBox6.Text}'
+           ,'{textBox4.Text}'
+           ,'{textBox5.Text}')", con);
 
                     if (command.ExecuteNonQuery() == 1)
                         this.Close();
